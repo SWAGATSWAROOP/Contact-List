@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= locals.title %></title>
+    <script src="https://kit.fontawesome.com/3754649633.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./CSS/home.css">
+  </head>
+  <body>
+    <H1 id=""><i class="fa-solid fa-address-book"></i> Contact List</H1>
+    <ol id="uList">
+      <% for(let i of locals.arr){ %>
+      <li>
+        <div class="Contact"><div><%= i.name %></div><div><%= i.phone %></div></div>
+        <a class="Trash" href="/delete/?id=<% i._id %>">
+            <i class="fa-solid fa-trash-can"></i>
+        </a>
+      </li>
+      <% } %>
+    </ol>
+    <H1>Forms</H1>
+    <form id="form" action="/add" method="post">
+      <input class="width-form" id="form-name" name="name" placeholder="Enter Your Name" type="text" required><p id="valid-name" class="valid-phone">Invalid!!</p><br><br>
+      <input class="width-form" id="form-phone" name="phone"  pattern="[0-9]+" placeholder="Enter Your Phone Number" required><p id="valid-phone" class="valid-phone">Invalid!!</p><br><br>
+      <button id="button" type="submit">Submit</button><br><br>
+    </form>
+    <script type="text/javascript" src="./JS/home.js"></script>
+  </body>
+</html>

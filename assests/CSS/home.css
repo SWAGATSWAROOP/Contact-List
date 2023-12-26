@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#uList {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#uList li{
+    background-color: aqua;
+    width: 50vh;
+    margin: 2px;
+    display: flex;
+}
+
+#uList li:hover{
+    background-color: gray;
+}
+
+.Contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  width: 80%;
+  font-size: large;
+  padding: 2vh;
+}
+
+.Trash{
+    padding: 2vh;
+    width: 10%;
+    justify-content: center;
+}
+
+.width-form{
+    width: 40vh;
+}
+
+#button{
+    border: solid black;
+    background-color: white;
+}
+
+.valid-phone{
+    border: black;
+    color: yellow;
+    background-color: red;
+    padding: 5px;
+    visibility: hidden;
+    display: inline;
+    margin-left: 10px;
+}
