@@ -17,7 +17,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded());
 
 //Middleware for including css/js files
-app.use(express.static("assests"));
+app.use(express.static("assets"));
 
 //Some of the midlleware
 app.use((req, res, next) => {
