@@ -6,7 +6,7 @@ const path = require("path");
 const db = require("./config/mongoose.js");
 const port = process.env.port || 3000;
 let app = express();
-
+db();
 //Providing Schema with model
 const Contact = require("./models/contact.js");
 
